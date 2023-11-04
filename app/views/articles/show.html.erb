@@ -1,0 +1,10 @@
+<h1><%= @article.title %></h1>
+
+<%= link_to 'Изменить', edit_article_path(@article) %>
+|
+<%= link_to 'Удалить', article_path(@article), data: {
+              turbo_method: :delete,
+              turbo_confirm: 'Вы уверены?'  
+              } %>
+
+<p><%= @article.body %></p>
